@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白幡店長 役割再編計画｜実栄商会</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Shippori Mincho', 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #333333;
+    background-color: #f5f0eb;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 24px auto;
+    background: #ffffff;
+    padding: 48px 48px 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  @media print {
+    body { background: #ffffff; }
+    .page {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    .page-break { page-break-before: always; }
+  }
+
+  /* ── ヘッダー ── */
+  .doc-header {
+    text-align: center;
+    border-bottom: 3px solid #8b2020;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+  }
+  .doc-header h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+  }
+  .doc-header .subtitle {
+    font-size: 13px;
+    color: #8b2020;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  .doc-header .meta {
+    font-size: 11px;
+    color: #999999;
+    letter-spacing: 1px;
+    margin-top: 12px;
+  }
+
+  /* ── セクション ── */
+  .section {
+    margin-bottom: 32px;
+  }
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #8b2020;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .section-title span {
+    font-size: 10px;
+    font-weight: 300;
+    color: #e8c88a;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .subsection-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-left: 4px solid #8b2020;
+    padding-left: 12px;
+    margin: 24px 0 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── テーブル ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 12.5px;
+  }
+  th {
+    background-color: #f5f0eb;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 2px solid #d4c7b4;
+    letter-spacing: 1px;
+    font-size: 11.5px;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #ece6dc;
+    vertical-align: top;
+    line-height: 1.7;
+  }
+  tr:last-child td {
+    border-bottom: 1px solid #d4c7b4;
+  }
+  .table-label {
+    font-weight: 600;
+    color: #444444;
+    white-space: nowrap;
+  }
+
+  /* ── 番号付き提案 ── */
+  .num-box {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #8b2020;
+    color: #ffffff;
+    text-align: center;
+    line-height: 28px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  .activity-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f0ebe3;
+  }
+  .activity-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .activity-content {
+    flex: 1;
+  }
+  .activity-content .title {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 13.5px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+  }
+  .activity-content .desc {
+    font-size: 12px;
+    color: #777777;
+    line-height: 1.7;
+  }
+
+  /* ── 強調ボックス ── */
+  .highlight-box {
+    background-color: #1a1a1a;
+    padding: 24px 28px;
+    margin: 16px 0 20px;
+  }
+  .highlight-box .label {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    color: #e8c88a;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+  .highlight-box h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .highlight-box p {
+    font-size: 12.5px;
+    color: #cccccc;
+    line-height: 1.9;
+  }
+
+  /* ── 情報ボックス ── */
+  .info-box {
+    background-color: #faf7f2;
+    padding: 20px 24px;
+    margin: 12px 0 20px;
+    border-left: 4px solid #e8c88a;
+  }
+  .info-box p {
+    font-size: 12.5px;
+    line-height: 1.9;
+    color: #555555;
+  }
+
+  /* ── 店舗カード ── */
+  .store-cards {
+    display: flex;
+    gap: 16px;
+    margin: 12px 0 20px;
+  }
+  .store-card {
+    flex: 1;
+    border: 1px solid #e0d5c7;
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .store-card .store-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .store-card .store-course {
+    font-size: 12px;
+    color: #8b2020;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .store-card .store-note {
+    font-size: 11px;
+    color: #999999;
+  }
+
+  /* ── 区切り ── */
+  .divider {
+    text-align: center;
+    padding: 16px 0;
+  }
+  .divider span {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 10px;
+    color: #c4b49a;
+    letter-spacing: 6px;
+  }
+
+  /* ── KPI ── */
+  .kpi-grid {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0 20px;
+  }
+  .kpi-item {
+    flex: 1;
+    text-align: center;
+    padding: 16px 12px;
+    background-color: #faf7f2;
+    border: 1px solid #e0d5c7;
+  }
+  .kpi-item .kpi-value {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #8b2020;
+  }
+  .kpi-item .kpi-unit {
+    font-size: 11px;
+    color: #8b2020;
+    font-weight: 400;
+  }
+  .kpi-item .kpi-label {
+    font-size: 11px;
+    color: #777777;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── フッター ── */
+  .doc-footer {
+    border-top: 1px solid #e0d5c7;
+    padding-top: 20px;
+    margin-top: 36px;
+    text-align: center;
+  }
+  .doc-footer p {
+    font-size: 11px;
+    color: #999999;
+    letter-spacing: 0.5px;
+    line-height: 2.0;
+  }
+  .doc-footer .company-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  /* ── リスト ── */
+  ul.check-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 16px;
+  }
+  ul.check-list li {
+    padding: 4px 0 4px 24px;
+    position: relative;
+    font-size: 12.5px;
+    color: #444444;
+  }
+  ul.check-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 4px;
+    color: #8b2020;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  第1部：業務引継ぎ計画                      -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- ヘッダー -->
+  <div class="doc-header">
+    <h1>白幡店長 役割再編計画</h1>
+    <p class="subtitle">実栄商会 東陽町店</p>
+    <p class="meta">2026年4月施行 &mdash; 社外秘</p>
+  </div>
+
+  <!-- 背景・目的 -->
+  <div class="section">
+    <div class="section-title">
+      <span>BACKGROUND</span>
+      背景と目的
+    </div>
+    <p style="margin-bottom: 16px;">
+      カメイドクロック店の閉店に伴い、東陽町店の体制を再編いたします。<br>
+      白幡店長の店舗業務の一部を副店長および湯川へ引き継ぎ、<br>
+      新たに<strong>法人営業・渉外</strong>を主軸業務として、扇橋本店・東陽町店の両店舗における法人売上の拡大を目指します。
+    </p>
+    <div class="info-box">
+      <p>
+        <strong>ポイント：</strong>カメイドクロック店から湯川が東陽町店へ合流します。<br>
+        4月は湯川の指導・育成を最優先とし、段階的に新体制へ移行します。
+      </p>
+    </div>
+  </div>
+
+  <!-- 区切り -->
+  <div class="divider"><span>&#9670; &#9670; &#9670;</span></div>
+
+  <!-- 第1部タイトル -->
+  <div class="section">
+    <div class="section-title">
+      <span>PART 1</span>
+      業務引継ぎ計画
+    </div>
+
+    <!-- 白幡店長に残す業務 -->
+    <h4 class="subsection-title">白幡店長に残す業務</h4>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:28%;">分類</th>
+          <th>業務内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">シフト管理</td>
+          <td>スタッフのシフト作成・調整</td>
+        </tr>
+        <tr>
+          <td class="table-label">VIP・法人客対応</td>
+          <td>法人会食・接待時の対応、クレーム対応</td>
+        </tr>
+        <tr>
+          <td class="table-label">スタッフ教育</td>
+          <td>新人研修、接客指導、サービス品質管理</td>
+        </tr>
+        <tr>
+          <td class="table-label">メニュー管理</td>
+          <td>メニュー構成・価格設定</td>
+        </tr>
+        <tr>
+          <td class="table-label">法人予約管理</td>
+          <td>法人予約の受付・席配置・当日対応</td>
+        </tr>
+        <tr>
+          <td class="table-label">経営報告</td>
+          <td>月次報告、オーナーへの報告</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 副店長へ引継ぐ業務 -->
+    <h4 class="subsection-title">副店長・湯川へ引継ぐ業務</h4>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:28%;">分類</th>
+          <th>業務内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">店舗運営</td>
+          <td>開店・閉店作業、営業中の店舗管理</td>
+        </tr>
+        <tr>
+          <td class="table-label">売上管理</td>
+          <td>日次売上集計、レジ締め</td>
+        </tr>
+        <tr>
+          <td class="table-label">発注・在庫</td>
+          <td>食材・ドリンクの発注、在庫管理</td>
+        </tr>
+        <tr>
+          <td class="table-label">接客・ホール</td>
+          <td>一般客の接客、ホール運営</td>
+        </tr>
+        <tr>
+          <td class="table-label">衛生管理</td>
+          <td>食品衛生、清掃チェック</td>
+        </tr>
+        <tr>
+          <td class="table-label">一般予約管理</td>
+          <td>個人客の予約受付・席配置</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 4月移行スケジュール -->
+  <div class="section">
+    <h4 class="subsection-title">4月 移行・指導スケジュール</h4>
+
+    <div class="highlight-box">
+      <p class="label">PRIORITY</p>
+      <h3>4月の最優先事項：湯川の指導・育成</h3>
+      <p>
+        カメイドクロック店から合流する湯川は、白幡店長のレベルには達していません。<br>
+        4月は白幡店長が直接指導し、東陽町店の水準まで引き上げることを最優先とします。
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:14%;">週</th>
+          <th style="width:29%;">白幡店長の重点</th>
+          <th style="width:29%;">湯川への指導</th>
+          <th style="width:28%;">法人営業</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">第1週</td>
+          <td>湯川の受け入れ・現状把握</td>
+          <td>東陽町店のオペレーション共有</td>
+          <td>PC初期設定・営業準備</td>
+        </tr>
+        <tr>
+          <td class="table-label">第2週</td>
+          <td>湯川と副店長への業務引継ぎ開始</td>
+          <td>実務を通じた指導（仕込み・接客）</td>
+          <td>営業リスト作成・テンプレート準備</td>
+        </tr>
+        <tr>
+          <td class="table-label">第3週</td>
+          <td>湯川・副店長主導で店舗運営を試行</td>
+          <td>白幡がフォロー・フィードバック</td>
+          <td>法人外回り開始</td>
+        </tr>
+        <tr>
+          <td class="table-label">第4週</td>
+          <td>新体制の定着確認</td>
+          <td>課題の洗い出し・改善指導</td>
+          <td>本格稼働・月次振り返り</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!--  第2部：法人営業・渉外 設計書                -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page page-break">
+
+  <!-- 区切り -->
+  <div class="divider"><span>&#9670; &#9670; &#9670;</span></div>
+
+  <div class="section">
+    <div class="section-title">
+      <span>PART 2</span>
+      新役割 &mdash; 法人営業・渉外 設計書
+    </div>
+
+    <!-- ミッション -->
+    <div class="highlight-box">
+      <p class="label">MISSION</p>
+      <h3>法人の会食・接待利用を獲得し、<br>扇橋本店・東陽町店の法人売上を拡大する</h3>
+      <p>白幡店長が両店舗を統括し、顧客ニーズに応じて最適な店舗・コースを提案します。</p>
+    </div>
+
+    <!-- 対象店舗 -->
+    <h4 class="subsection-title">対象店舗と主力コース</h4>
+
+    <p style="margin-bottom: 12px; font-size: 12.5px; color: #555;">
+      <strong>営業方針：</strong>プレミアム以上の高単価コースを主力として営業する。<br>
+      プレミアム・プラチナには法人特典を付帯し、差別化を図る。
+    </p>
+
+    <!-- 扇橋本店 -->
+    <div class="store-cards">
+      <div class="store-card">
+        <p class="store-name">扇橋本店</p>
+        <p class="store-course">昼の極みコース</p>
+        <p class="store-note">全10品 税込5,000円 他</p>
+      </div>
+    </div>
+
+    <!-- 東陽町店コース体系 -->
+    <p style="margin: 16px 0 8px; font-weight: 600; font-size: 13px; color: #1a1a1a; letter-spacing: 1px;">東陽町店 コース体系</p>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:22%;">グレード</th>
+          <th style="width:25%;">コース名</th>
+          <th>特徴</th>
+          <th style="width:22%;">法人特典</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">スタンダード</td>
+          <td>厳選コース</td>
+          <td>気軽な会食・懇親会向け</td>
+          <td style="color:#999;">&mdash;</td>
+        </tr>
+        <tr style="background-color: #faf7f2;">
+          <td class="table-label" style="color:#8b2020;">&#9733; プレミアム</td>
+          <td style="color:#8b2020; font-weight:600;">田じまコース</td>
+          <td>接待・大切なお客様向け</td>
+          <td style="color:#8b2020; font-size:11.5px;">法人特典あり</td>
+        </tr>
+        <tr style="background-color: #faf7f2;">
+          <td class="table-label" style="color:#8b2020;">&#9733; プラチナ</td>
+          <td style="color:#8b2020; font-weight:600;">松阪コース</td>
+          <td>最高級の松阪牛を堪能</td>
+          <td style="color:#8b2020; font-size:11.5px;">法人特典あり</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="info-box">
+      <p>
+        <strong>法人特典（プレミアム以上）：</strong>プラスαのサービスを付帯。<br>
+        例）ウェルカムドリンクサービス、個室優先確保、記念日演出対応、名刺・領収書対応 など<br>
+        <span style="font-size:11px; color:#999;">※ 特典内容は別途詳細を決定</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 営業ターゲット -->
+  <div class="section">
+    <h4 class="subsection-title">営業ターゲット</h4>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:28%;">区分</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">既存取引先の深耕</td>
+          <td>広告メール配信先の名刺交換先企業など、既存の繋がりからアップセル・リピートを狙う</td>
+        </tr>
+        <tr>
+          <td class="table-label">近隣法人の新規開拓</td>
+          <td>江東区・近隣エリアの企業への訪問営業（不動産、金融、士業、商社など接待ニーズのある業種）</td>
+        </tr>
+        <tr>
+          <td class="table-label">イベント・行事需要</td>
+          <td>GW・年末年始・歓送迎会・周年イベントなど季節・行事に合わせた提案</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 主な営業活動 -->
+  <div class="section">
+    <h4 class="subsection-title">主な営業活動</h4>
+
+    <div class="activity-item">
+      <div class="num-box">01</div>
+      <div class="activity-content">
+        <p class="title">法人訪問・挨拶回り</p>
+        <p class="desc">両店舗のコース案内を持参し、近隣企業を訪問。接待・会食ニーズをヒアリング。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">02</div>
+      <div class="activity-content">
+        <p class="title">見積書・提案書作成</p>
+        <p class="desc">団体予約、コース提案、ギフト手配など、法人ニーズに合わせた資料をPCで作成。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">03</div>
+      <div class="activity-content">
+        <p class="title">顧客管理</p>
+        <p class="desc">訪問先・商談履歴・見込み客をExcelまたはCRMで一元管理。フォロー漏れを防ぐ。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">04</div>
+      <div class="activity-content">
+        <p class="title">メール営業</p>
+        <p class="desc">Benchmark Email等を活用し、法人向けの季節案内・コース情報を定期配信。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">05</div>
+      <div class="activity-content">
+        <p class="title">法人予約受付・VIP対応</p>
+        <p class="desc">両店舗の法人予約を一括管理。当日は白幡が直接お出迎え・対応。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">06</div>
+      <div class="activity-content">
+        <p class="title">店舗・コースの最適提案</p>
+        <p class="desc">顧客の人数・予算・目的に応じ、扇橋本店と東陽町店を使い分けて提案。<br>プレミアム以上のコースを主力として営業し、法人特典で差別化。</p>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="num-box">07</div>
+      <div class="activity-content">
+        <p class="title">グルメ媒体の管理・整備</p>
+        <p class="desc">食べログ等のグルメサイトの掲載内容を管理。新コースの掲載、個室重視のプラン打ち出し、写真・情報の更新まで一貫して対応。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 区切り -->
+  <div class="divider"><span>&#9670; &#9670; &#9670;</span></div>
+
+  <!-- KPI -->
+  <div class="section">
+    <h4 class="subsection-title">KPI（目標指標）案</h4>
+    <div class="kpi-grid">
+      <div class="kpi-item">
+        <p class="kpi-value">5<span class="kpi-unit">〜10件/週</span></p>
+        <p class="kpi-label">法人訪問件数</p>
+      </div>
+      <div class="kpi-item">
+        <p class="kpi-value">3<span class="kpi-unit">件以上/月</span></p>
+        <p class="kpi-label">新規法人会食予約</p>
+      </div>
+      <div class="kpi-item">
+        <p class="kpi-value">&mdash;</p>
+        <p class="kpi-label">月間コース予約組数<br><span style="font-size:10px; color:#aaa;">（目標値は別途設定）</span></p>
+      </div>
+    </div>
+    <div class="info-box">
+      <p>
+        <strong>補足：</strong>KPIは4月の移行期間終了後、実績をもとに適切な数値に調整します。<br>
+        まずは「動き出す」ことを最優先とし、5月以降に本格的な目標管理に移行します。
+      </p>
+    </div>
+  </div>
+
+  <!-- PC活用計画 -->
+  <div class="section">
+    <h4 class="subsection-title">PC活用計画</h4>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:30%;">用途</th>
+          <th>ツール・方法</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">顧客管理</td>
+          <td>Excelテンプレート（訪問先・商談履歴・見込みランク・次回アクション）</td>
+        </tr>
+        <tr>
+          <td class="table-label">見積書・提案書</td>
+          <td>Excel / PowerPoint テンプレート（法人向けコース提案書、団体見積書）</td>
+        </tr>
+        <tr>
+          <td class="table-label">メール営業</td>
+          <td>Benchmark Email での法人向けメール配信、フォローアップメール</td>
+        </tr>
+        <tr>
+          <td class="table-label">企業リストアップ</td>
+          <td>Googleマップ等で近隣企業を検索・リスト化</td>
+        </tr>
+        <tr>
+          <td class="table-label">グルメ媒体管理</td>
+          <td>食べログ等の掲載内容更新、新コース掲載、個室プランの打ち出し・写真管理</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 時間配分 -->
+  <div class="section">
+    <h4 class="subsection-title">時間配分の目安（移行完了後）</h4>
+
+    <div class="info-box">
+      <p>
+        <strong>基本方針：</strong>曜日固定ではなく、プロジェクトの進捗に応じて柔軟に調整する。<br>
+        月・火は白幡休み。17:00〜19:00は現場勤務を固定（吉田さんとの兼ね合い＋ピーク時のアルバイト人件費削減のため）。<br>
+        デスクワーク・法人営業は17時までに完了する。
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:28%;">時間帯</th>
+          <th>使い方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-label">午前〜17時</td>
+          <td>法人外回り ／ デスクワーク（顧客管理・資料作成・媒体管理）<br><span style="font-size:11px; color:#999;">※ その週の営業案件・タスクに応じて自分で判断。17時までに完了する。</span></td>
+        </tr>
+        <tr>
+          <td class="table-label" style="color:#8b2020;">17:00〜19:00</td>
+          <td><strong>現場勤務（固定）</strong><br><span style="font-size:11px; color:#999;">※ 吉田さんとの体制維持＋ピーク時アルバイト人件費の削減。年単位で継続。</span></td>
+        </tr>
+        <tr>
+          <td class="table-label">19:00以降</td>
+          <td>店舗（営業・VIP対応）<br><span style="font-size:11px; color:#999;">※ 法人予約がある日はVIP対応を優先</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- フッター -->
+  <div class="doc-footer">
+    <p class="company-name">実栄商会</p>
+    <p>
+      本書は社内管理資料です。取り扱いにご注意ください。<br>
+      作成日：2026年4月1日
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
